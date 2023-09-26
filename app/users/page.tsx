@@ -1,12 +1,12 @@
 import React from "react";
-import AddToCart from "../components/addtocard/AddToCart";
-
-const page = () => {
+import UserTable from "./UserTable";
+const Users = () => {
   return (
-    <div className="p-2 my-2 bg-sky-400 text-xl text-yellow-300 hover:bg-sky-700">
-      <AddToCart />
-    </div>
+    <>
+      <h1>Users</h1>
+      <UserTable />
+    </>
   );
 };
 
-export default page;
+export default Users;

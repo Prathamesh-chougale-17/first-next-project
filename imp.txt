@@ -1,0 +1,44 @@
+should add
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+for rendering the tailwind css in the browser
+
+daisy ui is a tailwind css component library that is easy to use and highly customizable. It is built on top of tailwind css and comes with a lot of ready to use components, such as buttons, forms, modals, cards, etc.
+
+To install daisy ui, run the following command in your terminal:
+npm i -D daisyui
+
+Then, add the following line to your tailwind.config.js file:
+plugins: [require('daisyui')],
+
+to add the theme to your project via daisy ui, add the following line to your tailwind.config.js file:
+we have added the theme as a plugin to our tailwind.config.js file
+ data-theme="light" to the html tag in the layout.tsx file
+
+Special files in nextjs
+
+1 page.tsx 
+info: this file is used to render the page in the browser
+
+2 layout.tsx
+info: this file is used to render the layout of the page in the browser
+
+3 loading.tsx
+info: this file is used to render the loading page in the browser
+
+4 route.tsx
+this file to creating api's
+
+5 not-found.tsx
+this file is used to render the 404/custom page in the browser
+
+5 error.tsx
+this file is to handle general/custom error in the browser
+
+[name] make a dyanmic route in nextjs
+
+[...slug] make a dyanmic route inside a folder that array of string which read to multiple pages inside browers
+
+[[...slug]] make a dyanmic route inside a folder that array of array of string which read to multiple pages inside browers but it also route the inital page where it is made

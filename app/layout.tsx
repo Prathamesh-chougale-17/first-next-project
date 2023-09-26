@@ -16,6 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/*  data-theme="light" in html would change the theme in next js */}
       <body className={inter.className}>{children}</body>
     </html>
   );
