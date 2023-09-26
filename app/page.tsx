@@ -1,12 +1,18 @@
-import Image from "next/image";
-import Link from "next/link";
-
-export default function Home() {
-  return (
-    <main id="main-app">
-      <h1 id="h1-app">hello world</h1>
-      {/* <a href="/users">User</a> This way of using ancer tag to fetch the file lead to load the whole page again This lead to slow processing*/}
-      <Link href="/users">User</Link>
-    </main>
-  );
+interface User {
+  id: number;
+  title: string;
 }
+
+const page = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data: User[] = await res.json();
+  return (
+    <ul>
+      {data.map((user) => (
+        <li key={user.id}>{user.title}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default page;
