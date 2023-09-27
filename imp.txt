@@ -42,3 +42,5 @@ this file is to handle general/custom error in the browser
 [...slug] make a dyanmic route inside a folder that array of string which read to multiple pages inside browers
 
 [[...slug]] make a dyanmic route inside a folder that array of array of string which read to multiple pages inside browers but it also route the inital page where it is made
+
+23
