@@ -62,3 +62,13 @@ info:
 3. it caches the page for faster navigation on client
 
 to redirect from router we use router from next/navigation and push the url to the router{mostly used for login and logout pages}
+
+Loading:
+for showing the loading page we have two ways
+1. suspense
+info: it is used to show the loading page when the page is loading and is best for showing the component loading.
+
+2 loading.tsx
+info: it is used to show the loading page when the page is loading and is best for showing the page loading and UI.It should be added next to the page where we want to render loading page.
+
+use components in browers to check how the loading is working
