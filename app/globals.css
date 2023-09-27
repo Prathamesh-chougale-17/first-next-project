@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  padding: 5px;
+
+/* this overwrites the tailwind base defination of component and it will be rendered to all html styles */
+@layer base{
+  h1{
+    @apply font-bold text-2xl;
+  }
 }

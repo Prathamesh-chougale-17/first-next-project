@@ -43,4 +43,14 @@ this file is to handle general/custom error in the browser
 
 [[...slug]] make a dyanmic route inside a folder that array of array of string which read to multiple pages inside browers but it also route the inital page where it is made
 
-23
+for a query search in nextjs
+we use props:
+interface Props {
+  searchParams: { sortOrder: string };
+}
+
+layout.tsx
+
+to make change in entire project we use layout.tsx file
+majorly used for navbar and footer
+and give general css to classes or browers
