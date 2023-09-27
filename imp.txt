@@ -72,3 +72,8 @@ info: it is used to show the loading page when the page is loading and is best f
 info: it is used to show the loading page when the page is loading and is best for showing the page loading and UI.It should be added next to the page where we want to render loading page.
 
 use components in browers to check how the loading is working
+
+not-found.tsx:
+info: it is used to show the 404 page when the page is not found and is best for showing the page not found and UI.It should be added next to the page where we want to render 404 page.
+
+and notFound(); is used to show the 404 page in the browser
