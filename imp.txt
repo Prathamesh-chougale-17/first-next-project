@@ -77,3 +77,9 @@ not-found.tsx:
 info: it is used to show the 404 page when the page is not found and is best for showing the page not found and UI.It should be added next to the page where we want to render 404 page.
 
 and notFound(); is used to show the 404 page in the browser
+
+error.tsx:
+info: it is used to show the error page when the page is not found and is best for showing the page not found and UI.It should be added next to the page where we want to render error page.
+required : to 'use client' in top of the file
+
+//*** The Special File in nextjs first render the local file first and if it is not present locally then it renders global file ***//
