@@ -54,3 +54,11 @@ layout.tsx
 to make change in entire project we use layout.tsx file
 majorly used for navbar and footer
 and give general css to classes or browers
+
+Link:
+info:
+1. it only downloads the targeted page and not the entire page
+2. it Pre-fetches links that are in the viewport during idle time
+3. it caches the page for faster navigation on client
+
+to redirect from router we use router from next/navigation and push the url to the router{mostly used for login and logout pages}
