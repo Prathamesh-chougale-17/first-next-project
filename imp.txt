@@ -90,3 +90,11 @@ in api we have learned to pass api thought the route file and handle the api req
 
 /*for validation of data we use zod in schema.ts*/
 export the object from the schema file for validation
+
+to connect the database we use prisma
+and to connect to mysql we use command : npx prisma migrate dev it directly connect to the database
+and if we have to change in colomn we could do it by changing the schema.prisma file and then run the command : npx prisma migrate dev
+
+and to connect to mongodb we use command : npx prisma db push
+
+
