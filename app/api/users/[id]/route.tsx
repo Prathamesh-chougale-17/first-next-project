@@ -5,20 +5,32 @@
 //GET - get all data
 import { NextRequest, NextResponse } from "next/server";
 import userSchema from "../schema";
+import prisma from "@/prisma/client";
 
 //we pass request object to the function for preventing caching
-export function GET(
+export async function GET(
   request: NextRequest,
-  { params }: { params: { id: number } }
+  // { params }: { params: { id: number } }
+  { params }: { params: { id: string } }
 ) {
+  const user = await prisma.user.findUnique({
+    where: {
+      id: parseInt(params.id),
+    },
+  });
   // In real application we will fetch data from database
-  return NextResponse.json({ id: params.id, name: "lol" });
+  // return NextResponse.json({ id: params.id, name: "lol" });
+  if (!user) {
+    return NextResponse.json({ error: "User not found" }, { status: 404 });
+  }
+  return NextResponse.json(user);
 }
 
 //PUT - update data - replace all data
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: number } }
+  // { params }: { params: { id: number } }
+  { params }: { params: { id: string } }
 ) {
   //validate the request body
   //if the data is not valid we will return 400 status code
@@ -34,9 +46,31 @@ export async function PUT(
   const Validation = userSchema.safeParse(body);
   if (!Validation.success)
     return NextResponse.json(Validation.error.errors, { status: 400 });
-  if (params.id > 10)
+
+  const users = await prisma.user.findUnique({
+    where: {
+      id: parseInt(params.id),
+    },
+  });
+
+  if (!users) {
     return NextResponse.json({ error: "User not found" }, { status: 404 });
-  return NextResponse.json({ id: params.id, name: body.name }, { status: 200 });
+  }
+
+  const updatedUser = await prisma.user.update({
+    where: {
+      id: users.id,
+    },
+    data: {
+      name: body.name,
+      email: body.email,
+    },
+  });
+  // if (params.id > 10)
+  if (parseInt(params.id) > 10)
+    return NextResponse.json({ error: "User not found" }, { status: 404 });
+  // return NextResponse.json({ id: params.id, name: body.name }, { status: 200 });
+  return NextResponse.json(updatedUser, { status: 200 });
 }
 
 //DELETE - delete data

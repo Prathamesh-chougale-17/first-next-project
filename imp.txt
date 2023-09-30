@@ -97,4 +97,22 @@ and if we have to change in colomn we could do it by changing the schema.prisma 
 
 and to connect to mongodb we use command : npx prisma db push
 
+To use prisma in next js first search "prisma next clientprisma" on google we will get the code in first site
 
+copy the code and paste in the file prisma/client.ts
+
+to add the data in sql via prisma we use the following code in post function
+
+const users = await prisma.product.create({
+  data: {
+    name: 'product 1',
+    price: 100,
+    image: '/images/product1.jpg',
+    brand: 'brand 1',
+    category: 'category 1',
+    countInStock: 10,
+    description: 'description 1',
+  },
+})
+
+and the error handling should be done in just imidiate below the code

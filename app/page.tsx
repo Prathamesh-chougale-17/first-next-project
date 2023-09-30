@@ -1,4 +1,5 @@
 interface User {
+  userId: number;
   id: number;
   title: string;
 }
@@ -15,7 +16,9 @@ const page = async () => {
       <p>{new Date().toLocaleTimeString()}</p>
       <ul>
         {data.map((user) => (
-          <li key={user.id}>{user.title}</li>
+          <li key={user.id}>
+            {user.userId} {user.title}
+          </li>
         ))}
       </ul>
     </>
