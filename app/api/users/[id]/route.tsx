@@ -76,13 +76,30 @@ export async function PUT(
 //DELETE - delete data
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: number } }
+  // { params }: { params: { id: number } }
+  { params }: { params: { id: string } }
 ) {
+  const users = await prisma.user.findUnique({
+    where: {
+      id: parseInt(params.id),
+    },
+  });
+
+  if (!users) {
+    return NextResponse.json({ error: "User not found" }, { status: 404 });
+  }
+
+  const DeletedUser = await prisma.user.delete({
+    where: {
+      id: users.id,
+    },
+  });
   //validate the request body
   //If data don't exist , we will return 404 status code
   //delete the user
   //return the deleted user with 200 status code
-  if (params.id > 10)
+  if (parseInt(params.id) > 10)
     return NextResponse.json({ error: "User not found" }, { status: 404 });
-  return NextResponse.json({}, { status: 200 });
+  return NextResponse.json(DeletedUser, { status: 200 });
+  // return NextResponse.json({}, { status: 200 });
 }

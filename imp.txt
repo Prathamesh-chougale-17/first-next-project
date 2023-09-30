@@ -116,3 +116,11 @@ const users = await prisma.product.create({
 })
 
 and the error handling should be done in just imidiate below the code
+
+my google provider credencial:
+
+Client ID:   718637036839-oo105d03ltmq9f6quj94n9se2fcrsvqc.apps.googleusercontent.com
+
+Client secret:   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
+
+Creation date : 30 September 2023 at 13:35:20 GMT+5
