@@ -103,6 +103,8 @@ copy the code and paste in the file prisma/client.ts
 
 to add the data in sql via prisma we use the following code in post function
 
+/*** for and table first and model in schema.prisma and then run 'npx prisma migrate dev' ***/
+
 const users = await prisma.product.create({
   data: {
     name: 'product 1',
@@ -124,3 +126,7 @@ Client ID:   718637036839-oo105d03ltmq9f6quj94n9se2fcrsvqc.apps.googleuserconten
 Client secret:   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
 
 Creation date : 30 September 2023 at 13:35:20 GMT+5
+
+/*** error section ***/
+so if error comes as : SyntaxError: Unexpected token } in JSON at position 41
+then it is because of the json file is not in proper format in postman or while sending the data
