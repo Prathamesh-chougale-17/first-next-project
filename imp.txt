@@ -150,9 +150,16 @@ info: middleware redirect the user if the user is not loged with his account to 
 /****** Adapter ******/
 info: it is used to connect the database with next-auth
 command: npm i @next-auth/prisma-adapter
+we have to create a file in pages/api/auth/[...nextauth].ts
+and then we have to add the code in the file which i have provided link in from env file
+*dont forget to add strategy as 'jwt' in [...nextauth].ts file*
+
+/****** credencial ******/
+
 
 /*********************/
 /*** error section ***/
 so if error comes as : SyntaxError: Unexpected token } in JSON at position 41
 then it is because of the json file is not in proper format in postman or while sending the data
 
+While generating the prisma migrate make sure that project should not be running
