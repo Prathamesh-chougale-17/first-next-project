@@ -127,6 +127,23 @@ Client secret:   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
 
 Creation date : 30 September 2023 at 13:35:20 GMT+5
 
+Cloudinary:
+command to install: npm i next-cloudinary
+after installing the we have to set env in .env file and then create a new folder for cloudinary 
+***need some practise its simple***
+
+Next-auth:
+command to install: npm i next-auth
+ref:
+https://next-auth.js.org/configuration/initialization#route-handlers-app
+
+to use next-auth we have to create a file in pages/api/auth/[...nextauth].ts
+and then we have to add the code in the file which i have provided link in above
+we can also add the provider in the file
+
+to check the token after signing by the provider i have created the token in auth folder so we can see the info of person that have logged in.
+
 /*** error section ***/
 so if error comes as : SyntaxError: Unexpected token } in JSON at position 41
 then it is because of the json file is not in proper format in postman or while sending the data
+

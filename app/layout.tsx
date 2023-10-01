@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./Navbar";
+import AuthProvider from "./auth/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       {/*  data-theme="light" in html would change the theme in next js */}
       <body className={inter.className}>
-        <Navbar />
-        <main className="pl-3">{children}</main>
+        <AuthProvider>
+          <Navbar />
+          <main className="pl-3">{children}</main>
+        </AuthProvider>
       </body>
     </html>
   );
