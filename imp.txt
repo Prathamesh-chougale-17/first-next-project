@@ -146,6 +146,12 @@ to check the token after signing by the provider i have created the token in aut
 middleware.ts should be created in project directory and not in app folder
 info: middleware redirect the user if the user is not loged with his account to view any vital information
 
+
+/****** Adapter ******/
+info: it is used to connect the database with next-auth
+command: npm i @next-auth/prisma-adapter
+
+/*********************/
 /*** error section ***/
 so if error comes as : SyntaxError: Unexpected token } in JSON at position 41
 then it is because of the json file is not in proper format in postman or while sending the data
