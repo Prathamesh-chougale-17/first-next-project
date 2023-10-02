@@ -164,7 +164,7 @@ we have created manually and it is working fine
 /******** @ *********/
 it is used to import the file from the root directory
 
-
+*** client component cannot be async***
 
 /*********************/
 /*** error section ***/
