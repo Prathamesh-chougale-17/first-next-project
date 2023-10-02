@@ -155,6 +155,15 @@ and then we have to add the code in the file which i have provided link in from 
 *dont forget to add strategy as 'jwt' in [...nextauth].ts file*
 
 /****** credencial ******/
+It has nothing much to but it is used to store the credencial of the user in the database
+
+/****** react-email ******/
+it can be downloaded via npx create-email@latest but 
+we have created manually and it is working fine
+
+/******** @ *********/
+it is used to import the file from the root directory
+
 
 
 /*********************/
