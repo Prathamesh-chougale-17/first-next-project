@@ -160,6 +160,7 @@ It has nothing much to but it is used to store the credencial of the user in the
 /****** react-email ******/
 it can be downloaded via npx create-email@latest but 
 we have created manually and it is working fine
+command to run:npm run preview-email 
 
 /******** @ *********/
 it is used to import the file from the root directory
