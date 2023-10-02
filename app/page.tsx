@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Pheonix from "@/public/pheonix.png";
-import { authOptions } from "./api/auth/authOptions";
-import { getServerSession } from "next-auth";
 
 interface User {
   userId: number;
@@ -20,10 +18,11 @@ const Home = async () => {
   // const data: User[] = await res.json();
 
   //auth
-  const session = await getServerSession(authOptions);
+  // const session = await getServerSession(authOptions);
   return (
     <>
-      <h1>hello {session?.user?.name}</h1>
+      {/* <h1>hello {session?.user?.name}</h1> */}
+      <h1>hello Everyone</h1>
 
       <Image src={Pheonix} alt="Pheonix" />
       {/* <p>{new Date().toLocaleTimeString()}</p> */}
