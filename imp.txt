@@ -1,3 +1,17 @@
+to install the package, run the following command in the terminal:
+```
+npx create-next-app@latest first-next-project
+```
+This will create a new folder called first-next-project and install all the necessary packages in it.
+
+Server Side Rendering
+This is a technique that allows the server to render the page and send it to the client. The client will then be able to see the page without having to wait for the JavaScript to load. This is a great way to improve the performance of your website.
+
+Static Site Generation
+This is a technique that allows you to generate static pages for your website. This is a great way to improve the performance of your website.
+
+As default in fetch function there is default set of chaching the data. So we need to set the cache to no-cache to get the latest data from the server if and only if data is dyanamic.
+
 should add
 @tailwind base;
 @tailwind components;

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Pheonix from "@/public/pheonix.png";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/authOptions";
 
 interface User {
   userId: number;
@@ -8,9 +10,9 @@ interface User {
 }
 
 const Home = async () => {
-  // const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-  //   next: { revalidate: 10 },
-  // });
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    next: { revalidate: 10 },
+  });
   //cache: "no-store", //This is to prevent caching and always fetch the latest data and mostly used when data is dynamic
   //This is to revalidate the data after 10 seconds
   //caching memory is only valid for fetch function and not for axios and any other library
@@ -18,11 +20,11 @@ const Home = async () => {
   // const data: User[] = await res.json();
 
   //auth
-  // const session = await getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
   return (
     <>
-      {/* <h1>hello {session?.user?.name}</h1> */}
-      <h1>hello Everyone</h1>
+      <h1>hello {session?.user?.name}</h1>
+      {/* <h1>hello Everyone</h1> */}
 
       <Image src={Pheonix} alt="Pheonix" />
       {/* <p>{new Date().toLocaleTimeString()}</p> */}
